@@ -1,0 +1,33 @@
+.modal-container {
+    width: 180px;
+    height: 130px;
+    z-index: 9999;
+    background: #FFFFFF;
+    border: 1px solid rgba(84, 95, 125, 0.04);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px 20px 21px 20px;
+    .modal-box {
+     ul {
+        list-style: none;
+        li {
+            padding-bottom: 20px;
+            cursor: pointer;
+            img {
+                padding-right: 14px;
+            }
+            span {
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                color: #545F7D;
+            }
+        }
+     }
+    }
+}
