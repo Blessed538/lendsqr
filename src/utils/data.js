@@ -150,32 +150,44 @@ export const dashboardCard = [
 export const TableHeaders = [
   {
     Icon: FilterIcons,
+    id: "1",
     title: "Organization",
     alt: "organization",
   },
   {
     Icon: FilterIcons,
     title: "UserName",
+    id: "2",
     stats: "username",
   },
   {
     Icon: FilterIcons,
+    id: "3",
     title: "Email",
     stats: "email",
   },
   {
     Icon: FilterIcons,
     title: "Phone Number",
+    id: "4",
     stats: "phone number",
   },
   {
     Icon: FilterIcons,
     title: "Date Joined",
+    id: "5",
     stats: "date joined",
   },
   {
     Icon: FilterIcons,
+    id: "6",
     title: "Status",
     stats: "status",
+  },
+  {
+    Icon: "",
+    id: "7",
+    title: "",
+    stats: "",
   },
 ];

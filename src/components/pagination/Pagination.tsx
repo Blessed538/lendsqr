@@ -14,7 +14,6 @@ const Pagination = ({
 }) => {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
-  console.log("itemsPerPage", itemsPerPage);
   const [itemOffset, setItemOffset] = useState(0);
 
   // Simulate fetching items from another resources.
@@ -33,8 +32,6 @@ const Pagination = ({
     );
     setItemOffset(newOffset);
   };
-
-  console.log("currentItem", currentItems);
 
   return (
     <div className="pagination-container">
@@ -55,12 +52,13 @@ const Pagination = ({
           activeClassName={"active"}
           disabledClassName={"disabled-page"}
           breakLabel="..."
+          breakClassName={"break"}
           containerClassName={"react-pagination-container"}
           nextLabel={<NextBtn />}
           pageClassName={"item"}
           nextClassName={"next"}
           onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={1}
           pageCount={pageCount}
           previousLabel={<PrevBtn />}
           renderOnZeroPageCount={() => null}

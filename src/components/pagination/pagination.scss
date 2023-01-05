@@ -38,13 +38,15 @@
     .next {
         font-size: 4px;
         height: 24px;
-        margin-left: 21px;
         width: 24px;
       }
       .previous {
-        margin-right: 21px;
+        margin-right: 20px;
         height: 24px;
         width: 24x;
+      }
+      .break {
+        margin-right: 20px;
       }
       .item {
         font-family: 'Work Sans';
@@ -52,14 +54,16 @@
         font-weight: 500;
         cursor: pointer;
         font-size: 16px;
-        padding: 0px 20px;
+        width: 10px;
+        height: 19px;
+        margin-right: 20px;
         line-height: 19px;
         color: #545F7D;
       }
       .active {
-        border: solid 1px #808e9b;
-        border-radius: 40px;
-     text-align: center;
+        // border: solid 1px #808e9b;
+        // border-radius: 40px;
+        text-align: center;
         color: #808e9b;
       }
       .disabled-page {

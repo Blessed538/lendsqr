@@ -10,13 +10,20 @@
     .table-responsive {
         overflow-x: auto;
         table {
-            width: 100%;
+            border-spacing: 15px;
+            word-break: break-all;
             thead {
                
                 th {
                     text-transform: uppercase;
                     text-align: left;
                     padding: 10px 0px;
+                   &:nth-child(4){
+                       width: 160px;
+                     }
+                     &:nth-child(7){
+                        width: 30px;
+                      }
                     p {
                         font-family: 'Work Sans';
                         font-style: normal;
@@ -31,25 +38,87 @@
             }
             tbody {
                 text-align: left;
+                position: relative;
                 tr {
-                    position: relative;
                     border-bottom: 1px solid rgba(33, 63, 125, 0.06);
                     td {
-                        padding-top: 21px;
-                        padding-bottom: 30px;
+                        padding-top: 23px;
+                        padding-bottom: 23px;
                         font-family: 'Work Sans';
                         font-style: normal;
                         font-weight: 400;
+                        text-align: left !important;
                         font-size: 14px;
                         line-height: 16px;
                         color: #545F7D;
+                        &:nth-child(5){
+                            text-align: right;
+                            width: 154px;
+                        }
+                        &:nth-child(6){
+                            width: 100px;
+                        }
+                        &:nth-child(7){
+                            text-align: right;
+                            width: 30px;
+                        }
+                   
                         button {
-                            background: #E9B200;
-                            padding: 7px 13px 6px 13px;
+                            background: none;
+                            border: none;
+                            cursor: pointer;
+                            // width: 100%;
+                        }
+                        img {
+                            cursor: pointer;
+                        }
+                        .inactive {
+                            font-family: 'Work Sans';
+                            font-style: normal;
+                            background: rgba(84,95,125, 0.06);
                             border-radius: 100px;
-                            border: hidden;
-                            outline: none;
-                            background: #545F7D;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 16px;
+                            padding: 7px 12px 6px;
+                            text-align: center;
+                            color: #545F7D;
+                        }
+                        .active {
+                            font-family: 'Work Sans';
+                            font-style: normal;
+                            background: rgba(57,205,98,0.06);
+                            border-radius: 100px;
+                            font-weight: 400;
+                            padding: 7px 12px 6px;
+                            font-size: 14px;
+                            line-height: 16px;
+                            text-align: center;
+                            color: #545F7D;
+                        }
+                        .blacklist {
+                        background: rgba(228,3,59,0.06);
+                        font-family: 'Work Sans';
+                        font-style: normal;
+                        padding: 7px 12px 6px;
+                        border-radius: 100px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: center;
+                        color: #E4033B;
+                        }
+                        .pending {
+                            background: rgba(233,178,0,0.01);
+                            font-family: 'Work Sans';
+                            font-style: normal;
+                            padding: 7px 12px 6px;
+                            border-radius: 100px;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 16px;
+                            text-align: center;
+                            color: #E9B200;
                         }
                     }
                 }

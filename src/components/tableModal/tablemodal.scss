@@ -1,6 +1,6 @@
 .modal-container {
     width: 180px;
-    height: 130px;
+    // height: 130px;
     z-index: 9999;
     background: #FFFFFF;
     border: 1px solid rgba(84, 95, 125, 0.04);
@@ -8,7 +8,7 @@
     border-radius: 4px;
     position: absolute;
     right: 0;
-    bottom: 0;
+    // bottom: 0;
     padding: 20px 20px 21px 20px;
     .modal-box {
      ul {
@@ -16,6 +16,9 @@
         li {
             padding-bottom: 20px;
             cursor: pointer;
+            a {
+                text-decoration: none;
+            }
             img {
                 padding-right: 14px;
             }

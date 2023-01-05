@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import viewDetails from "../../images/viewDetails.svg";
 import blackList from "../../images/blackusers.svg";
 import activeUsers from "../../images/activateUser.svg";
@@ -7,22 +7,32 @@ import "./tablemodal.scss";
 interface ModalType {
   isOpen: boolean;
   toggle: () => void;
+  userId: string;
 }
 const TableModal = (props: ModalType) => {
-  const { isOpen, toggle } = props;
-  console.log("isOpen", isOpen);
+  const { isOpen, toggle, userId } = props;
   return (
     <>
       {isOpen ? (
         <div className="modal-container">
           <div className="modal-box">
             <ul>
-              {ModalDetails.map((item, index) => (
-                <li key={index}>
-                  <img src={item.icon} />
-                  <span>{item.title}</span>
+              <>
+                <li>
+                  <Link to={`/users/${userId}`}>
+                    <img src={viewDetails} />
+                    <span>View Details</span>
+                  </Link>
                 </li>
-              ))}
+                <li>
+                  <img src={blackList} />
+                  <span>Blacklist User</span>
+                </li>
+                <li>
+                  <img src={activeUsers} />
+                  <span>Activate User</span>
+                </li>
+              </>
             </ul>
           </div>
         </div>
