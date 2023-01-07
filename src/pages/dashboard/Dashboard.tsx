@@ -1,4 +1,3 @@
-import React from "react";
 import MainContent from "../../components/mainContent/MainContent";
 import "./dashboard.scss";
 const Dashboard = () => {

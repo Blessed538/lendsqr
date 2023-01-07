@@ -29,34 +29,50 @@ const dashboard = [
       {
         icon: UserFriends,
         title: "Users",
+        id: "1",
+        link: "/",
       },
       {
         icon: UserTimes,
+        id: "2",
         title: "Guarantors",
+        link: "/guarantor",
       },
       {
         icon: Slack,
+        id: "3",
+        link: "/slack",
         title: "Loans",
       },
 
       {
         icon: Handshake,
+        id: "4",
         title: "Decisions Models",
+        link: "/decision",
       },
       {
         icon: Savings,
+        id: "5",
         title: "Savings",
+        link: "/savings",
       },
       {
         icon: Slack,
+        id: "6",
         title: "Loan Requests",
+        link: "/loans request",
       },
       {
         icon: WhiteList,
         title: "Whitelist",
+        link: "/whitelist",
+        id: "7",
       },
       {
         icon: UserTimes,
+        id: "9",
+        link: "/karma",
         title: "Karma",
       },
     ],
@@ -67,39 +83,57 @@ const dashboard = [
       {
         icon: Org,
         title: "Organization",
+        link: "/org",
+        id: "10",
       },
       {
         icon: loanProduct,
         title: "Loan Products",
+        link: "/loan",
+        id: "11",
       },
       {
         icon: SavingProduct,
         title: "Saving Products",
+        link: "/savings",
+        id: "12",
       },
       {
         icon: Fees,
         title: "Fees and Charges",
+        link: "/fees",
+        id: "13",
       },
       {
         icon: Transactions,
         title: "Transactions",
+        link: "/transactions",
+        id: "14",
       },
 
       {
         icon: Services,
         title: "Services",
+        id: "15",
+        link: "/services",
       },
       {
         icon: ServiceAccount,
         title: "Service Accounts",
+        link: "/account",
+        id: "16",
       },
       {
         icon: Settlement,
         title: "Settlements",
+        link: "/settlement",
+        id: "17",
       },
       {
         icon: Report,
         title: "Reports",
+        id: "18",
+        link: "/report",
       },
     ],
   },
@@ -109,14 +143,20 @@ const dashboard = [
       {
         icon: Slider,
         title: "Preferences",
+        link: "/slider",
+        id: "19",
       },
       {
         icon: Badge,
         title: "Fees and Pricing",
+        link: "/badge",
+        id: "20",
       },
       {
         icon: Audits,
         title: "Audit Logs",
+        link: "/audit",
+        id: "21",
       },
     ],
   },
@@ -189,5 +229,128 @@ export const TableHeaders = [
     id: "7",
     title: "",
     stats: "",
+  },
+];
+
+export const UserDetailsInfo = [
+  {
+    title: "Personal Information",
+    items: [
+      {
+        id: "1",
+        title: "Full Name",
+      },
+      {
+        title: "Phone Number",
+        id: "2",
+      },
+      {
+        id: "3",
+        title: "Email Address",
+      },
+      {
+        title: "Phone Number",
+        id: "4",
+      },
+      {
+        title: "bvn",
+        id: "5",
+      },
+      {
+        id: "6",
+        title: "Gender",
+      },
+      {
+        id: "6",
+        title: "Marital Status",
+      },
+      {
+        id: "6",
+        title: "Children",
+      },
+      {
+        id: "7",
+        title: "Type of Residence",
+      },
+    ],
+  },
+  {
+    title: "Eduction And Employment",
+    items: [
+      {
+        id: "1",
+        title: "Level of education",
+      },
+      {
+        title: "Employment Status",
+        id: "2",
+      },
+      {
+        id: "3",
+        title: "Sector of Employment",
+      },
+      {
+        title: "Duration of Employment",
+        id: "4",
+      },
+      {
+        title: "Office Email",
+        id: "5",
+      },
+      {
+        id: "6",
+        title: "Monthly Income",
+      },
+      {
+        id: "6",
+        title: "Loan Repayment",
+      },
+      {
+        id: "6",
+        title: "Children",
+      },
+      {
+        id: "7",
+        title: "Type of Residence",
+      },
+    ],
+  },
+  {
+    title: "Social",
+    items: [
+      {
+        id: "1",
+        title: "Twitter",
+      },
+      {
+        title: "Facebook",
+        id: "2",
+      },
+      {
+        id: "3",
+        title: "Instagram",
+      },
+    ],
+  },
+  {
+    title: "Gurantor",
+    items: [
+      {
+        id: "1",
+        title: "Full Name",
+      },
+      {
+        title: "Phone Number",
+        id: "2",
+      },
+      {
+        id: "3",
+        title: "Email Address",
+      },
+      {
+        title: "Relationship",
+        id: "4",
+      },
+    ],
   },
 ];

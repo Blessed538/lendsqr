@@ -12,6 +12,7 @@
         table {
             border-spacing: 15px;
             word-break: break-all;
+            width: 100%;
             thead {
                
                 th {
@@ -38,6 +39,7 @@
             }
             tbody {
                 text-align: left;
+                width: 100%;
                 position: relative;
                 tr {
                     border-bottom: 1px solid rgba(33, 63, 125, 0.06);
@@ -125,5 +127,19 @@
             
             }
         }
+    }
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+        h2 {
+            color: #39CDCC;
+            font-size: 30px;
+            font-family: 'Work Sans';
+            font-weight: 600;
+       
     }
 }

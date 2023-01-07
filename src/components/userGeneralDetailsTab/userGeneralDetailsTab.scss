@@ -1,0 +1,56 @@
+.tab-container {
+    width: 100%;
+    padding: 0px 30px;
+    padding-bottom: 41px;
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    .tab-card {
+        width: 100%;
+        color: #213F7D;
+        .card-details {
+            .tab-section {
+                padding-top: 30px;
+                     h2 {
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                margin-bottom: 30px;
+                line-height: 19px;
+                color: #213F7D;
+            }
+            ul {
+                list-style: none;
+                display: grid;
+                grid-template-columns: 1fr 1.5fr 1.5fr repeat(2, 1fr);
+                grid-column-gap: 50px;
+                border-bottom: 1px solid #213F7D;
+                li {
+                    word-wrap: break-word;
+                    padding-bottom: 30px;
+                    h4 {
+                        font-family: 'Work Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                        margin-bottom: 8px;
+                        text-transform: uppercase;
+                        color: #545F7D;   
+                    }
+                    p {
+                        font-family: 'Work Sans';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #545F7D;
+                    }
+                }
+            }
+            }
+        }
+    }
+}

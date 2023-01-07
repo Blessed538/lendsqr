@@ -48,3 +48,5 @@ export interface UserInterface {
   education: Education;
   id: string;
 }
+
+// https://levelup.gitconnected.com/9-projects-you-can-do-to-become-a-front-end-master-in-2023-a4389153148c - projects to work on

@@ -1,3 +1,6 @@
+@import "../../sass/abstracts/mixins.scss";
+
+
 .main-container{
     background: #FBFBFB;
     flex: 1;
@@ -19,8 +22,13 @@
     .cards-container {
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        gap: 10px;
+        gap: 26px;
         margin-top: 1rem;
-
+        @include md {
+            grid-template-columns: repeat(3,1fr);
+        }
+        @include card-md {
+            grid-template-columns: repeat(2,1fr);
+        }
     }
 }

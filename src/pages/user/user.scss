@@ -1,0 +1,68 @@
+.user-container {
+width: 100%;
+
+    .back-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+        span {
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            margin-left: 14px;
+        }
+    }
+    .userdetails-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 36px;
+        .user-details{
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: #213F7D;
+        }
+        .userdetails-btn-container {
+            display: flex;
+            align-items: center;
+            .blacklist-btn {
+                border: 1px solid #E4033B;
+                border-radius: 8px;
+                padding: 0px 16px;
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                cursor: pointer;
+                margin-right: 20px;
+                letter-spacing: 0.1em;
+                height: 40px;
+                text-transform: uppercase;
+                color: #E4033B;
+            }
+            .activate-btn {
+                border: 1px solid #39CDCC;
+                border-radius: 8px;
+                padding: 0px 16px;
+                cursor: pointer;
+                font-family: 'Work Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                height: 40px;
+                text-align: center;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #39CDCC;
+            }
+        }
+    }
+}
