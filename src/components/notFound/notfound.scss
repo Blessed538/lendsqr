@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    p {
+        font-size: 30px;
+        color: #39CDCC;
+        font-family: 'Work Sans';
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+    }
+}

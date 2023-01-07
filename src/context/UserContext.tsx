@@ -1,10 +1,17 @@
 import { createContext } from "react";
 import { UserInterface } from "../Types";
 
-const UserContext = createContext<{
+type UserContextType = {
   users: UserInterface[];
+  itemsPerPage: number;
+  total: number;
+  pageCount: number;
+  currentItems: UserInterface[];
+  handlePageClick: (e: any) => void;
   isLoading: boolean;
-}>({ users: [], isLoading: false });
+};
+
+const UserContext = createContext({} as UserContextType);
 
 const { Provider, Consumer } = UserContext;
 

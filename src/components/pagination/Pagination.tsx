@@ -1,37 +1,33 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./pagination.scss";
 import ReactPaginate from "react-paginate";
 import { ReactComponent as PrevBtn } from "../../images/prev-btn.svg";
 import { ReactComponent as NextBtn } from "../../images/next-btn.svg";
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+import { UserContext } from "../../context/UserContext";
 
-const Pagination = ({
-  itemsPerPage,
-  total,
-}: {
-  itemsPerPage: number;
-  total: number;
-}) => {
+const Pagination = ({ itemsPerPage }: { itemsPerPage: number }) => {
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
 
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
-  const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = items.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(total / itemsPerPage);
+  const { users, handlePageClick, pageCount } = useContext(UserContext);
 
-  // Invoke when user click to request another page.
-  const handlePageClick = (event: any) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`
-    );
-    setItemOffset(newOffset);
-  };
+  // // Simulate fetching items from another resources.
+  // // (This could be items from props; or items loaded in a local state
+  // // from an API endpoint with useEffect and useState)
+  // const endOffset = itemOffset + itemsPerPage;
+  // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  // const currentItems = users.slice(itemOffset, endOffset);
+  // const pageCount = Math.ceil(total / itemsPerPage);
+
+  // // Invoke when user click to request another page.
+  // const handlePageClick = (event: any) => {
+  //   const newOffset = (event.selected * itemsPerPage) % users.length;
+  //   console.log(
+  //     `User requested page number ${event.selected}, which is offset ${newOffset}`
+  //   );
+  //   setItemOffset(newOffset);
+  // };
 
   return (
     <div className="pagination-container">

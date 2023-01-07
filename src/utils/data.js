@@ -30,7 +30,7 @@ const dashboard = [
         icon: UserFriends,
         title: "Users",
         id: "1",
-        link: "/",
+        link: "/users",
       },
       {
         icon: UserTimes,

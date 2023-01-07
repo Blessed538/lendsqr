@@ -1,7 +1,6 @@
 import React, { ChangeEvent, useContext, useMemo, useState } from "react";
 import "./table.scss";
 import { ReactComponent as FilterIcon } from "../../images/filterbutton.svg";
-import menu from "../../images/menu.png";
 import { ReactComponent as MenuIcon } from "../../images/tablemenu.svg";
 import { TableHeaders } from "../../utils/data";
 import Pagination from "../pagination/Pagination";
@@ -11,12 +10,13 @@ import OrganizationFilter from "../organizationFilter/OrganizationFilter";
 import { UserContext } from "../../context/UserContext";
 import dayjs from "dayjs";
 import clsx from "clsx";
+
 const DashboardTable = () => {
   const { isOpen: openFilter, toggle: toggleFilter } = useModal();
   const { isOpen: openModal, toggle: toggleModal } = useModal();
   const [headers] = useState(TableHeaders);
   const [currentTab, setCurrentTab] = useState("one");
-  const { users, isLoading } = useContext(UserContext);
+  const { users, isLoading, currentItems } = useContext(UserContext);
   const [currentID, setCurrentID] = useState("");
   const [currentFilterID, setCurrentFilterID] = useState("");
 
@@ -25,6 +25,11 @@ const DashboardTable = () => {
   };
 
   const status = ["Active", "Inactive", "Blacklisted", "Pending"];
+
+  const closeModal = (e: any) => {
+    toggleFilter();
+    e.stopPropagation();
+  };
 
   return (
     <div style={{ position: "relative" }}>
@@ -62,10 +67,10 @@ const DashboardTable = () => {
                 ))}
               </thead>
 
-              <tbody onClick={toggleFilter}>
+              <tbody onClick={closeModal}>
                 <>
-                  {users &&
-                    users.map((user) => {
+                  {currentItems &&
+                    currentItems.map((user) => {
                       const rand = Math.floor(Math.random() * status.length);
                       return (
                         <>
@@ -112,7 +117,7 @@ const DashboardTable = () => {
         </div>
       </div>
 
-      <Pagination itemsPerPage={10} total={200} />
+      <Pagination itemsPerPage={10} />
     </div>
   );
 };

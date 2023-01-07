@@ -6,7 +6,9 @@
 
 @import "./sass/components/buttons";
 
-
+html, body {
+  height: 100%; 
+}
 
 * {
    font-family: 'Work Sans', sans-serif;
