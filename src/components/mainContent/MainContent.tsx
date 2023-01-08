@@ -35,7 +35,7 @@ const MainContent = () => {
       .then((res) => res.json())
       .then(
         (result) => {
-          setValue = localStorage.setItem("usersList", JSON.stringify(result));
+          // setValue = localStorage.setItem("usersList", JSON.stringify(result));
           setUsers(result);
 
           setIsLoading(false);
@@ -48,17 +48,27 @@ const MainContent = () => {
 
   return (
     <>
-      <Provider value={{ users, currentItems,pageCount,handlePageClick, isLoading, total, itemsPerPage }}>
-        <div className="main-container">
-          <h2>Users</h2>
-          <div className="cards-container">
-            {cards.map((card, index) => (
-              <Card key={index} card={card} />
-            ))}
-          </div>
-          <DashboardTable />
+      <div className="main-container">
+        <h2>Users</h2>
+        <div className="cards-container">
+          {cards.map((card, index) => (
+            <Card key={index} card={card} />
+          ))}
         </div>
-      </Provider>
+        <Provider
+          value={{
+            users,
+            currentItems,
+            pageCount,
+            handlePageClick,
+            isLoading,
+            total,
+            itemsPerPage,
+          }}
+        >
+          <DashboardTable />
+        </Provider>
+      </div>
     </>
   );
 };

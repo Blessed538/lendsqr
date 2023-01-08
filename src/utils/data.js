@@ -4,7 +4,7 @@ import Slack from "../images/sack.svg";
 import Handshake from "../images/handshake.svg";
 import Savings from "../images/piggy-bank.svg";
 import WhiteList from "../images/user-check.svg";
-import FirstCard from "../images/cardUsers.svg";
+import FirstCard from "../images/firstcard.svg";
 import ActiveUsers from "../images/activeUsers.svg";
 import UserLoans from "../images/userLoans.svg";
 import UserSaving from "../images/userSavings.svg";

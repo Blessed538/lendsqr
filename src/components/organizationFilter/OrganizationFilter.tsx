@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Formik } from "formik";
 import "./organizationFilter.scss";
 interface FilterProps {
@@ -7,6 +7,33 @@ interface FilterProps {
 }
 
 const OrganizationFilter = ({ isOpen, toggle }: FilterProps) => {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef(null);
+
+  // const onClickOutside = (e: {
+  //   target: any;
+  //   preventDefault: () => void;
+  //   stopPropagation: () => void;
+  // }) => {
+  //   const element = e.target;
+  //   console.log("are you here", element);
+  //   if (modalRef.current && !modalRef.current.contains(element)) {
+  //     e.preventDefault();
+  //     e.stopPropagation();
+  //     console.log("i am here");
+  //     toggle();
+
+  //     console.log("is toogle working");
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   document.body.addEventListener("click", onClickOutside);
+  //   return () => {
+  //     document.removeEventListener("click", onClickOutside);
+  //   };
+  // }, []);
+
   return (
     <>
       {isOpen ? (
@@ -47,12 +74,13 @@ const OrganizationFilter = ({ isOpen, toggle }: FilterProps) => {
               handleSubmit,
               isSubmitting,
             }) => (
-              <div>
+              <div ref={modalRef}>
                 <form onSubmit={handleSubmit}>
                   <div className="organization">
                     <label>Organization</label>
                     <input
                       type="text"
+                      ref={inputRef}
                       name="organization"
                       onChange={handleChange}
                       onBlur={handleBlur}
@@ -122,7 +150,11 @@ const OrganizationFilter = ({ isOpen, toggle }: FilterProps) => {
                     {errors.status && touched.status && errors.status}
                   </div>
                   <div className="btn">
-                    <button className="btn-white" disabled={isSubmitting}>
+                    <button
+                      className="btn-white"
+                      onClick={toggle}
+                      disabled={isSubmitting}
+                    >
                       Reset
                     </button>
                     <button

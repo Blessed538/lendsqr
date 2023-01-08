@@ -83,7 +83,7 @@
                 }
                
                 &:hover, &:active{
-                    background: rgba(57,205,204,0.6);
+                    background: rgba(57,205,204,0.06);
                 }
                 img {
                     padding-right: 10px;
@@ -113,7 +113,7 @@
       }
 
 .activenav{
-    background: rgba(57,205,204,0.6);
+    background: rgba(57,205,204,0.06);
     &:before {
         @extend %pseudo-block;
     }

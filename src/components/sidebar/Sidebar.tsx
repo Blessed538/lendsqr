@@ -32,7 +32,7 @@ const Sidebar = () => {
           <ul>
             {data.items.map((item, index) => (
               <>
-                <li key={index}>
+                <li key={item.id}>
                   <NavLink
                     to={`${item.link}`}
                     key={item.id}

@@ -6,14 +6,15 @@ import "./tablemodal.scss";
 
 interface ModalType {
   isOpen: boolean;
-  toggle: () => void;
+  // toggle: () => void;
   userId: string;
 }
 const TableModal = (props: ModalType) => {
-  const { isOpen, toggle, userId } = props;
+  const { isOpen, userId } = props;
+
   return (
     <>
-      {isOpen ? (
+      {isOpen && (
         <div className="modal-container">
           <div className="modal-box">
             <ul>
@@ -36,7 +37,7 @@ const TableModal = (props: ModalType) => {
             </ul>
           </div>
         </div>
-      ) : null}
+      )}
     </>
   );
 };
